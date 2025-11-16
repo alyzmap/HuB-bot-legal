@@ -1,0 +1,263 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HuB Bot - Legal Documentation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #0a0a0a;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            color: #e4e4e7;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        .container {
+            max-width: 480px;
+            width: 100%;
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .logo {
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
+            margin: 0 auto 24px;
+            box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3);
+            overflow: hidden;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+            color: #fafafa;
+        }
+
+        .header p {
+            font-size: 14px;
+            color: #a1a1aa;
+            font-weight: 400;
+        }
+
+        .updated {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(34, 197, 94, 0.1);
+            color: #22c55e;
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 500;
+            margin-top: 16px;
+            border: 1px solid rgba(34, 197, 94, 0.2);
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .doc-card {
+            background: #141414;
+            border: 1px solid #27272a;
+            border-radius: 12px;
+            padding: 24px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+
+        .doc-card:hover {
+            background: #1a1a1a;
+            border-color: #3f3f46;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+        }
+
+        .doc-card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .doc-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(102, 126, 234, 0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .doc-card h2 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #fafafa;
+            letter-spacing: -0.3px;
+        }
+
+        .doc-card p {
+            font-size: 13px;
+            line-height: 1.6;
+            color: #a1a1aa;
+            margin-bottom: 16px;
+            font-weight: 400;
+        }
+
+        .doc-card a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: #818cf8;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .doc-card a:hover {
+            color: #a5b4fc;
+        }
+
+        .doc-card a::after {
+            content: '→';
+            font-size: 14px;
+            transition: transform 0.2s;
+        }
+
+        .doc-card:hover a::after {
+            transform: translateX(3px);
+        }
+
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            padding-top: 32px;
+            border-top: 1px solid #27272a;
+        }
+
+        .footer-languages {
+            font-size: 12px;
+            color: #71717a;
+            margin-bottom: 16px;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+        }
+
+        .feature-tag {
+            background: rgba(102, 126, 234, 0.1);
+            color: #a5b4fc;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 500;
+            border: 1px solid rgba(102, 126, 234, 0.2);
+        }
+
+        @media (max-width: 640px) {
+            body { padding: 24px 16px; }
+            .header h1 {
+                font-size: 24px;
+            }
+            .doc-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img src="maskot.png" alt="HuB Bot">
+            </div>
+            <h1>HuB Bot</h1>
+            <p>Legal Documentation</p>
+            <span class="updated">✓ Nov 16, 2025</span>
+        </div>
+
+        <div class="content">
+            <div class="doc-card" onclick="window.location.href='privacy-policy.html'">
+                <div class="doc-card-header">
+                    <div class="doc-icon">🔒</div>
+                    <h2>Gizlilik Politikası</h2>
+                </div>
+                <p>Verilerinizin nasıl işlendiği, AI öğrenme sistemi ve Kullanım Analizi hakkında detaylı bilgi.</p>
+                <a href="privacy-policy.html">Politikayı Görüntüle</a>
+            </div>
+
+            <div class="doc-card" onclick="window.location.href='terms-of-service.html'">
+                <div class="doc-card-header">
+                    <div class="doc-icon">📜</div>
+                    <h2>Hizmet Şartları</h2>
+                </div>
+                <p>HuB Bot'u kullanırken uymanız gereken kurallar, AI sohbet kullanımı ve sorumluluklar.</p>
+                <a href="terms-of-service.html">Şartları Görüntüle</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer-languages">🇹🇷 Türkçe • 🇬🇧 English</div>
+            <div class="features">
+                <span class="feature-tag">AI Sohbet</span>
+                <span class="feature-tag">Profil Öğrenme</span>
+                <span class="feature-tag">Kişiselleştirme</span>
+                <span class="feature-tag">Kullanım Analizi</span>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('contextmenu', e => e.preventDefault());
+        document.addEventListener('selectstart', e => e.preventDefault());
+        document.addEventListener('copy', e => e.preventDefault());
+        document.addEventListener('cut', e => e.preventDefault());
+    </script>
+</body>
+</html>
+
+
+
+
