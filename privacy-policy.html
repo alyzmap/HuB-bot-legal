@@ -74,13 +74,20 @@
                         </ul>
                     </div>
                     <div class="box">
-                        <strong>Geri Bildirim</strong>
-                        <ul><li>Mesaj reaksiyonları (👍 / 👎) yanıt kalitesi iyileştirme amaçlı</li></ul>
+                        <strong>Geri Bildirim ve Eğitim Verileri</strong>
+                        <ul>
+                            <li>Mesaj reaksiyonları (👍 / 👎) yanıt kalitesi iyileştirme amaçlı</li>
+                            <li><strong>HuBLux Eğitim Sistemi:</strong> Kullanıcı sorularınız ve tercih edilen yanıtlar (👍 ile işaretlenen), yerel AI modelimizi iyileştirmek için eğitim verisi olarak kullanılır</li>
+                            <li>Eğitim verileri anonim değildir - User ID ile ilişkilendirilir ancak yalnızca bot içinde kullanılır, üçüncü taraflarla paylaşılmaz</li>
+                            <li>Geri bildirim verileri MySQL veritabanında güvenli şekilde saklanır</li>
+                        </ul>
                     </div>
                     <div class="warn"><strong>Toplamadığımız Veriler:</strong> Özel mesaj içerikleri, ses kayıtları, ödeme bilgileri, e‑posta, kalıcı IP kayıtları.</div>
                     <h3>2. Kullanım Amaçları</h3>
                     <ul>
                         <li>Kişiselleştirilmiş yanıt üretimi ve stil uyarlama</li>
+                        <li><strong>HuBLux AI Modeli Eğitimi:</strong> Kullanıcı geri bildirimlerine dayalı olarak yerel AI modelimizi iyileştirme</li>
+                        <li>Yanıt kalitesini artırmak için makine öğrenimi algoritmaları geliştirme</li>
                         <li>Kötüye kullanımı önleme ve temel güvenlik sinyalleri</li>
                         <li>Sistem güvenilirliği, performans ve anonim istatistikler</li>
                     </ul>
@@ -89,26 +96,30 @@
                         <li>AI bağlamı: geçici (yalnızca son 20)</li>
                         <li>Profil / öğrenme: hesap veya sunucu aktif kaldığı sürece</li>
                         <li>Geri bildirim & hata kayıtları: 90 gün</li>
+                        <li><strong>Eğitim verileri (HuBLux):</strong> Model kalitesini korumak için süresiz saklanır, ancak istediğiniz zaman silinmesini talep edebilirsiniz</li>
                     </ul>
                     <h3>4. Paylaşım ve Üçüncü Taraflar</h3>
-                    <p>Veriler satılmaz veya kiralanmaz. Yanıt üretimi için güvenilir üçüncü taraf AI servisleri kullanılır; iletilen mesajlar yalnızca yanıt üretimi için işlenir, eğitim amaçlı kullanılmaz ve kalıcı olarak depolanmaz.</p>
+                    <p>Veriler satılmaz veya kiralanmaz. Yanıt üretimi için güvenilir üçüncü taraf AI servisleri (Groq, Gemini) kullanılır; iletilen mesajlar yalnızca yanıt üretimi için işlenir, bu servislerin eğitim amaçlı kullanımı yoktur ve kalıcı olarak depolanmaz.</p>
+                    <p><strong>Önemli:</strong> Yerel HuBLux AI modelimiz için toplanan eğitim verileri hiçbir zaman üçüncü taraflarla paylaşılmaz, yalnızca kendi sunucularımızda işlenir.</p>
                     <h3>5. Haklarınız (KVKK/GDPR)</h3>
                     <ul>
                         <li>Bilgi alma, erişim, düzeltme, silme, itiraz, taşınabilirlik</li>
-                        <li><code>/ayarlar</code> komutuyla “Verilerimi Sil” talebi</li>
+                        <li><code>/ayarlar</code> komutuyla "Verilerimi Sil" talebi (tüm profil, geri bildirim ve eğitim verilerini kapsar)</li>
+                        <li>Eğitim verilerinizi silmek istediğinizde, verileriniz bir sonraki model eğitim döngüsünde kaldırılır</li>
                     </ul>
                     <h3>6. Güvenlik Önlemleri</h3>
                     <ul>
                         <li>Yetkilendirilmiş erişim & düzenli güncellemeler</li>
                         <li>Şifreleme ve erişim denetimleri</li>
-                        <li>Yedekleme ve izleme mekanizmaları</li>
+                        <li>MySQL veritabanı güvenlik yapılandırması ve yedekleme</li>
+                        <li>Eğitim verilerinin yerel sunucularda işlenmesi</li>
                     </ul>
                     <h3>7. Çerezler</h3>
                     <p>Web tabanlı bir hizmet olmadığından çerez kullanılmaz; yalnızca Discord API üzerinden oturum ve komut istatistiği (anonim) yönetimi yapılır.</p>
                     <h3>8. Çocukların Gizliliği</h3>
                     <p>Discord yaş sınırına (13+) uyulur; bilerek 13 yaş altı verisi toplanmaz.</p>
                     <h3>9. Uluslararası Aktarım</h3>
-                    <p>Veriler AB sınırları içindeki altyapılarda saklanır; aktarım gerekirse uygun standartlarla korunur.</p>
+                    <p>Veriler yerel sunucularda saklanır; üçüncü taraf API çağrıları gerektiğinde uygun standartlarla korunur.</p>
                     <h3>10. Politika Değişiklikleri</h3>
                     <p>Önemli güncellemeler resmi Discord duyuruları ve bu sayfa üzerinden bildirilir.</p>
                     <h3>11. İletişim</h3>
@@ -136,13 +147,20 @@
                         </ul>
                     </div>
                     <div class="box">
-                        <strong>Feedback</strong>
-                        <ul><li>Message reactions (👍 / 👎) to improve answer quality</li></ul>
+                        <strong>Feedback & Training Data</strong>
+                        <ul>
+                            <li>Message reactions (👍 / 👎) to improve answer quality</li>
+                            <li><strong>HuBLux Training System:</strong> Your questions and preferred answers (marked with 👍) are used as training data to improve our local AI model</li>
+                            <li>Training data is not anonymous - associated with User ID but used only within the bot, never shared with third parties</li>
+                            <li>Feedback data is securely stored in MySQL database</li>
+                        </ul>
                     </div>
                     <div class="warn"><strong>We Do NOT Collect:</strong> Private message contents, voice recordings, payment info, email, permanent IP logs.</div>
                     <h3>2. Purposes</h3>
                     <ul>
                         <li>Personalized responses & style adaptation</li>
+                        <li><strong>HuBLux AI Model Training:</strong> Improving our local AI model based on user feedback</li>
+                        <li>Developing machine learning algorithms to enhance response quality</li>
                         <li>Abuse prevention & basic safety signals</li>
                         <li>Reliability metrics & anonymized statistics</li>
                     </ul>
@@ -151,25 +169,29 @@
                         <li>Context: temporary (last 20 messages only)</li>
                         <li>Profile/Learning: while account/server active</li>
                         <li>Feedback & error logs: 90 days</li>
+                        <li><strong>Training data (HuBLux):</strong> Retained indefinitely to maintain model quality, but can be deleted upon request</li>
                     </ul>
                     <h3>4. Sharing & Third Parties</h3>
-                    <p>No selling or renting. Trusted third-party AI services may process messages solely to generate responses—no training usage, no permanent storage.</p>
+                    <p>No selling or renting. Trusted third-party AI services (Groq, Gemini) may process messages solely to generate responses—no training usage by these services, no permanent storage.</p>
+                    <p><strong>Important:</strong> Training data collected for our local HuBLux AI model is never shared with third parties and processed only on our own servers.</p>
                     <h3>5. Your Rights (GDPR)</h3>
                     <ul>
                         <li>Access, information, rectification, erasure, objection, portability</li>
-                        <li>Use <code>/ayarlar</code> on Discord to request data deletion</li>
+                        <li>Use <code>/ayarlar</code> on Discord to request data deletion (includes all profile, feedback, and training data)</li>
+                        <li>When requesting deletion of training data, your data will be removed in the next model training cycle</li>
                     </ul>
                     <h3>6. Security</h3>
                     <ul>
                         <li>Authorized access, encryption, regular updates</li>
-                        <li>Backups and monitoring safeguards</li>
+                        <li>MySQL database security configuration and backups</li>
+                        <li>Training data processed on local servers</li>
                     </ul>
                     <h3>7. Cookies</h3>
                     <p>No cookies; only Discord API session & anonymous usage stats.</p>
                     <h3>8. Children's Privacy</h3>
                     <p>Complies with Discord age restriction (13+); no knowing collection under 13.</p>
                     <h3>9. International Transfer</h3>
-                    <p>Data stored within EU; transfers protected by applicable standards.</p>
+                    <p>Data stored on local servers; third-party API calls protected by applicable standards when necessary.</p>
                     <h3>10. Changes</h3>
                     <p>Major updates announced on official Discord and reflected here.</p>
                     <h3>11. Contact</h3>
@@ -189,6 +211,5 @@
         document.addEventListener('copy',e=>e.preventDefault());
         document.addEventListener('cut',e=>e.preventDefault());
     </script>
-    <!-- build: trigger pages rebuild; removed legacy duplicated tail -->
 </body>
 </html>
